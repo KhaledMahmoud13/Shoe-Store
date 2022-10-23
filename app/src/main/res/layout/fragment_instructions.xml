@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- LinearLayout to display the views vertically-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/b3"
+        android:orientation="vertical"
+        tools:context=".ui.WelcomeFragment">
+        <!--    TextView to display instruction title-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/instructions"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <!-- TextView to preview instruction content-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:text="@string/instructionsContent"
+            android:textAlignment="center"
+            android:textColor="@color/b1"
+            android:textSize="25sp"
+            android:textStyle="italic|bold" />
+        <!-- Button to navigate to the next fragment-->
+        <Button
+            android:id="@+id/btn_to_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_margin="16dp"
+            android:layout_weight="0"
+            android:backgroundTint="@color/b1"
+            android:text="@string/next"
+            android:textColor="@color/w" />
+
+    </LinearLayout>
+</layout>
