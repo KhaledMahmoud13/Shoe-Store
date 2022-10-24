@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.viewModel.ShoeViewModel" />
+    </data>
+
     <!-- LinearLayout to display the views vertically-->
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -26,7 +32,9 @@
                 android:id="@+id/et_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="text" />
+                android:inputType="text"
+                android:onTextChanged="@{(text,start,before,count) -> viewModel.newAddedShoe.setName(text.toString())}"
+                android:text="@{viewModel.newAddedShoe.name}"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <!--        TextInputLayout and EditTextLayout for enter Shoe Size-->
@@ -45,7 +53,9 @@
                 android:id="@+id/et_size"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="number" />
+                android:inputType="number"
+                android:onTextChanged="@{(text,start,before,count) -> viewModel.newAddedShoe.setSize(text.toString())}"
+                android:text="@{viewModel.newAddedShoe.size.toString()}"/>
         </com.google.android.material.textfield.TextInputLayout>
         <!--        TextInputLayout and EditTextLayout for enter Shoe Company-->
         <com.google.android.material.textfield.TextInputLayout
@@ -63,7 +73,9 @@
                 android:id="@+id/et_company"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="text" />
+                android:inputType="text"
+                android:onTextChanged="@{(text,start,before,count) -> viewModel.newAddedShoe.setCompany(text.toString())}"
+                android:text="@{viewModel.newAddedShoe.company}"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <!--        TextInputLayout and EditTextLayout for enter Shoe Description-->
@@ -82,7 +94,9 @@
                 android:id="@+id/et_description"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="text" />
+                android:inputType="text"
+                android:onTextChanged="@{(text,start,before,count) -> viewModel.newAddedShoe.setDescription(text.toString())}"
+                android:text="@{viewModel.newAddedShoe.description}"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <!--        LinerLayout and inside of it two button one to add and one to cancel-->

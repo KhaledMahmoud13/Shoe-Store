@@ -1,7 +1,8 @@
 package com.udacity.shoestore.models
 
-data class Shoe(var name: String,
-                var size: Double,
-                var company: String,
-                var description: String,
-)
+class Shoe(){
+    var name: String? = null
+    var size: String? = null
+    var company: String? = null
+    var description: String? = null
+}
